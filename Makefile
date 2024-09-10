@@ -25,4 +25,8 @@ libbuddy.a: $(OBJS)
 
 buddy_allocator_test: buddy_allocator_test.o $(LIBS)
 						$(CC) $(CCOPTS) -o $@ $^ -lm
-						
+
+pseudo_malloc_test: pseudo_malloc_test.o $(LIBS)
+						$(CC) $(CCOPTS) -o $@ $^ -lm
+
+clean: rm -rf *.o *~ $(LIBS) $(BINS)
